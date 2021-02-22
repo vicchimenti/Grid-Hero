@@ -197,11 +197,23 @@ div.card span.newsroomArticleSpecialCategory {
     }
 }
 
+
+
+
+
 @media screen and (min-width: 767.999px) {
     /* If Bootstrap 4 only */
     div.gridOrganizerWrapper {
         padding: 0 50px 50px 50px;
     }
+
+    .newsroomBlurb .newsroomArticleTitle a {
+        color: #aa0000;
+        font-family: "Roboto Slab", serif;
+        font-size: 2.4rem;
+    }
+
+
 }
 
 
