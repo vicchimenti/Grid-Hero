@@ -31,54 +31,53 @@ div.gridOrganizerWrapper {
     padding-bottom: 50px;
 }
 
-div.gridOrganizer.standardContent {
+/* div.gridOrganizer.standardContent {
     display: flex;
     flex: 0 0 100%;
     flex-flow: row wrap;
     justify-content: center;
-}
+} */
 
 div.gridOrganizer div.titleWrapper {
     width: 100%;
 }
 
-div.gridFeedItem {
+/* div.gridFeedItem {
     margin: 15px;
     max-width: 260px;
     padding: 0;
-}
+} */
 
-div.gridFeedItem .articleImage {
+/* div.gridFeedItem .articleImage {
     padding: 0%;
-}
+} */
 
-div.gridFeedItem div.newsroomArticleBlurb.container div.row {
+/* div.gridFeedItem div.newsroomArticleBlurb.container div.row {
     margin-left: 0;
     margin-right: 1px;
     padding-left: 0;
     padding-right: 0;
-}
+} */
 
-div.gridFeedItem h3.card-title {
+/* div.gridFeedItem h3.card-title {
     font-size: 1.25rem;
     font-weight: 450;
     margin-top: 0;
     margin-bottom: 10px;
     padding-bottom: 10px;
-}
+} */
 
-div.gridFeedItem p {
+/* div.gridFeedItem p {
     font-size: 1rem;
     font-weight: 450;
     line-height: inherit;
-    /* If not Bootstrap 4 review margin bottom */
     margin-bottom: 0;
-}
+} */
 
-div.gridFeedItem .newsroomArticlePublishedDate {
+/* div.gridFeedItem .newsroomArticlePublishedDate {
     font-size: 1rem;
     font-weight: 500;
-}
+} */
 
 
 /** horizontal rule between articles **/
