@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 1.9
+ *     @version 2.1
  */
 
 
@@ -36,12 +36,7 @@ try {
     var degrees = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Degree(s)' output='normal' display_field='name' />");
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />");
 
-    // Phone
-    // Email Address
-    // Building/Room Number
-
     
-
  
 
     /***
@@ -166,17 +161,11 @@ try {
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
     document.write(contactPhone);
     document.write(contactEmail);
-
-
-    // document.write('<div class="card-subtitle mb-2 text-muted">' + degreeOne + '</div>');
-    // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));
     document.write('</div>'); // close card-body
     document.write('<div class="card-footer">');
     document.write(listOfTitles);
     document.write(listOfDegrees);
     document.write('</div>'); // close card-footer
-
-    // document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span><span class="catPinned">' + catPin + '</span></div>');
     document.write(endingHTML);
 
 
