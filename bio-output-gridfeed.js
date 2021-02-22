@@ -25,32 +25,39 @@ try {
      * 
      * */
     var profileTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name of Faculty or Staff Member' output='normal' display_field='value' />");
-    var headline = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Headline' output='normal' display_field='value' />");
+    // var headline = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Headline' output='normal' display_field='value' />");
     var frontPageImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Photo' output='normal' formatter='path/*' />");
     // var frontPageImageCaption = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Main Image Caption' output='normal' modifiers='striptags,htmlentities' />");
     // var frontPageImageCredit = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Main Image Credit' output='normal' modifiers='striptags,htmlentities' />");
-    var articleSummary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Abstract' output='normal' display_field='value' />");
-    var articleSubtitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Subtitle' output='normal' display_field='value' />");
-    var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Body' output='normal' display_field='value' />");
+    var profileSummary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary Biography' output='normal' display_field='value' />");
+    // var articleSubtitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article Subtitle' output='normal' display_field='value' />");
+    var profileFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Extended Biography' output='normal' display_field='value' />");
     var author = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Author' output='normal' display_field='value' />");
     var publishedDate = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Publish Date' output='normal' date_format='MMMM d, yyyy' />");
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />");
-    var degrees = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Degree(s)' output='normal' display_field='name' />");
+    var titles = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Position Title(s)' output='normal' display_field='name' />");
+    var degrees = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Degree(s)' output='normal' display_field='name' />");    var degrees = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Degree(s)' output='normal' display_field='name' />");
     var pinned = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Pinned' output='normal' display_field='value' />");
     var catPin = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Category Pin' output='normal' display_field='value' />");
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />");
 
+    Phone
+    Email Address
+    Building/Room Number
 
-
+    
+    Extended Biography
+ 
 
     /***
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var cardText = "<span class='card-text subtitle'><p>" + articleSubtitle + "</p></span>";
+    var cardText = "<span class='card-text summary'><p>" + profileSummary + "</p></span>";
     var titleLink = "";
     var listItems = "";
     var listOfDegrees = "";
+    var listOfTitles = "";
     var thumbNailString = "";
     var beginningHTML = '<div class="gridFeedItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + articleTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneA" data-position-selected="ZoneA" />">';
     var endingHTML = '</div>';
@@ -59,7 +66,7 @@ try {
 
 
     /***
-     *  parse the list of tags, add <li> tags
+     *  parse the list of degrees, add <li> tags
      * 
      * */
     if (degrees != "") {
@@ -67,7 +74,22 @@ try {
         for (let i = 0; i < arrayOfDegrees.length; i++) {
             listItems += '<li class="tag">' + arrayOfDegrees[i] + '</li>';
         }
-        listOfDegrees = '<div class="tags hidden"><ul class="degrees">' + listItems + '</ul></div>';
+        listOfDegrees = '<div class="tags hidden"><ul class="profileDegrees">' + listItems + '</ul></div>';
+    }
+
+
+
+
+    /***
+     *  parse the list of titles, add <li> tags
+     * 
+     * */
+    if (titles != "") {
+        var arrayOfTitles = degrees.split('\n');
+        for (let i = 0; i < arrayOfTitles.length; i++) {
+            listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
+        }
+        listOfTitles = '<div class="tags hidden"><ul class="profileTitles">' + listItems + '</ul></div>';
     }
 
 
@@ -77,10 +99,10 @@ try {
      *  determine if the article contains full text content
      * 
      * */
-    if (articleFullBody == "") {
-        titleLink = '<h3 class="card-title">' + headline + '</h3>';
+    if (profileFullBody == "") {
+        titleLink = '<h3 class="card-title">' + profileTitle + '</h3>';
     } else {
-        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
+        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '">' + profileTitle + '</a></h3>';
     }
 
 
@@ -114,7 +136,8 @@ try {
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     document.write('</div>'); // close newsroomArticleBlurb
     document.write('<div class="card-footer"><medium class="cardPublishedDate">' + publishedDate + '</medium></div>');
-    document.write(listOfTags);
+    document.write(listOfDegrees);
+    document.write(listOfTitles);
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span><span class="catPinned">' + catPin + '</span></div>');
     document.write(endingHTML);
 
