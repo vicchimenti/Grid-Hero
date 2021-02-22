@@ -68,7 +68,7 @@ try {
         for (let i = 0; i < arrayOfDegrees.length; i++) {
             listItems += '<li class="tag">' + arrayOfDegrees[i] + '</li>';
         }
-        listOfDegrees = '<div class="tags hidden"><ul class="profileDegrees">' + listItems + '</ul></div>';
+        listOfDegrees = '<div class="tags"><ul class="profileDegrees">' + listItems + '</ul></div>';
     }
 
 
@@ -84,7 +84,7 @@ try {
         for (let i = 0; i < arrayOfTitles.length; i++) {
             listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
         }
-        listOfTitles = '<div class="tags hidden"><ul class="profileTitles">' + listItems + '</ul></div>';
+        listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
     }
 
 
