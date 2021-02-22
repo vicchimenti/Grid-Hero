@@ -47,7 +47,7 @@ try {
      *  Declare/Assign local variables with base formatting
      * 
      * */
-    var cardText = "<span class='newsroomArticleLead card-text subtitle'><p>" + articleSubtitle + "</p></span>";
+    var cardText = "<span class='card-text subtitle'><p>" + articleSubtitle + "</p></span>";
     var titleLink = "";
     var listItems = "";
     var listOfTags = "";
@@ -67,7 +67,7 @@ try {
         for (let i = 0; i < arrayOfTags.length; i++) {
             listItems += '<li class="tag">' + arrayOfTags[i] + '</li>';
         }
-        listOfTags = '<div class="newsroomArticle tags hidden"><ul class="categories">' + listItems + '</ul></div>';
+        listOfTags = '<div class="tags hidden"><ul class="categories">' + listItems + '</ul></div>';
     }
 
 
@@ -78,9 +78,9 @@ try {
      * 
      * */
     if (articleFullBody == "") {
-        titleLink = '<h3 class="newsroomArticleTitle card-title">' + headline + '</h3>';
+        titleLink = '<h3 class="card-title">' + headline + '</h3>';
     } else {
-        titleLink = '<h3 class="newsroomArticleTitle card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
+        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '">' + headline + '</a></h3>';
     }
 
 
@@ -91,10 +91,10 @@ try {
      * 
      * */
     if (frontPageImage == "") {
-        thumbNailString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
+        thumbNailString = '<span class="hidden">No Image Provided</span>';
 
     } else {
-        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
+        thumbNailString = '<span class="cardImageWrapper"><img src="' + frontPageImage + '" class="card-img-top" alt="' + frontPageImageCaption + '" /></span>';
     }
 
 
@@ -108,12 +108,12 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
-    document.write('<div class="newsroomArticleBlurb card-body">');
+    document.write('<div class="card-body">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, authorByLine));
     document.write('</div>'); // close newsroomArticleBlurb
-    document.write('<div class="card-footer"><medium class="newsroomArticlePublishedDate">' + publishedDate + '</medium></div>');
+    document.write('<div class="card-footer"><medium class="cardPublishedDate">' + publishedDate + '</medium></div>');
     document.write(listOfTags);
     document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span><span class="catPinned">' + catPin + '</span></div>');
     document.write(endingHTML);
