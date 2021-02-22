@@ -44,7 +44,7 @@ div.gridOrganizer div.titleWrapper {
 
 div.gridFeedItem {
     display: flex;
-    flex: 1 0 calc(25% - 10px);
+    flex: 1 0 calc(35% - 10px);
     margin: 15px;
     max-width: 260px;
     padding: 0;
@@ -223,9 +223,9 @@ div.card span.newsroomArticleSpecialCategory {
 
 @media screen and (min-width: 576px) {
     /* If Bootstrap 4 only */
-    div.gridFeedItem {
+    /* div.gridFeedItem {
         flex: auto;
-    }
+    } */
 }
 
 
@@ -252,15 +252,14 @@ div.card span.newsroomArticleSpecialCategory {
 
 @media screen and (max-width: 1200px) {
     /* If Bootstrap 4 only */
-    .card-deck div.gridFeedItem.card {
+    /* .card-deck div.gridFeedItem.card {
         flex: auto;
-    }
+    } */
 }
 
 @media screen and (max-width: 767.999px) {
     h2.organizerTitle {
         font-size: 1.75rem;
-        ;
         margin-left: 10px;
         margin-right: 10px;
         padding-left: 15px;
