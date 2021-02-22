@@ -51,7 +51,8 @@ try {
     var listOfDegrees = "";
     var listOfTitles = "";
     var thumbNailString = "";
-    var titleOne = ""
+    var titleOne = "";
+    var degreeOne = "";
     var anchorWrap = '<div class="hidden">' + anchorTag + '</div>';
     var beginningHTML = '<div class="gridFeedItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + profileTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneA" data-position-selected="ZoneA" />">';
     var endingHTML = '</div>';
@@ -70,6 +71,7 @@ try {
             listItems += '<li class="tag">' + arrayOfDegrees[i] + '</li>';
         }
         listOfDegrees = '<div class="tags"><ul class="profileDegrees">' + listItems + '</ul></div>';
+        degreeOne = arrayOfDegrees[0];
     }
 
 
@@ -129,6 +131,7 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
+    document.write('<div class="card-subtitle mb-2 text-muted">' + degreeOne + '</div>');
 
 
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));
