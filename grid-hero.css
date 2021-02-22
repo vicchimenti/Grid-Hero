@@ -42,15 +42,15 @@ div.gridOrganizer div.titleWrapper {
     width: 100%;
 }
 
-/* div.gridFeedItem {
+div.gridFeedItem {
     margin: 15px;
     max-width: 260px;
     padding: 0;
-} */
+}
 
-/* div.gridFeedItem .articleImage {
+div.gridFeedItem .articleImage {
     padding: 0%;
-} */
+}
 
 /* div.gridFeedItem div.newsroomArticleBlurb.container div.row {
     margin-left: 0;
@@ -59,13 +59,16 @@ div.gridOrganizer div.titleWrapper {
     padding-right: 0;
 } */
 
-/* div.gridFeedItem h3.card-title {
-    font-size: 1.25rem;
+
+
+div.gridFeedItem h3.card-title {
+    font-size: 2rem;
     font-weight: 450;
-    margin-top: 0;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-} */
+}
+
+div.gridFeedItem h3.card-title a {
+    color: #aa0000;
+}
 
 /* div.gridFeedItem p {
     font-size: 1rem;
