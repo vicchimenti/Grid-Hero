@@ -1,12 +1,28 @@
-/* ****** Wraps Overflow within container ****** */
+/* ****** Hide hidden items ****** */
+.hidden {
+    display: none;
+}
 
+
+
+
+/* ****** Wraps Overflow within container ****** */
 div#MainZone div.container {
     display: contents;
 }
 
 
-/* *****  Grid Organizer customizations  **** */
 
+
+/* *****  Hero Organizer customizations  **** */
+div.heroOrganizer.card-deck {
+    flex-flow: column;
+}
+
+
+
+
+/* *****  Grid Organizer customizations  **** */
 div.gridOrganizerWrapper {
     background-color: #f7f7f7;
     /* background-color: #e6efff; */
