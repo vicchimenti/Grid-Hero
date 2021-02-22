@@ -64,11 +64,21 @@ div.gridFeedItem .articleImage {
 div.gridFeedItem h3.card-title {
     font-size: 2rem;
     font-weight: 450;
+    color: #aa0000;
+    padding: 0;
 }
 
 div.gridFeedItem h3.card-title a {
+    font-size: 2rem;
+    font-weight: 450;
     color: #aa0000;
+    padding: 0;
 }
+
+div.gridFeedItem .card-subtitle {
+    font-size: 1.5rem;
+}
+
 
 /* div.gridFeedItem p {
     font-size: 1rem;
@@ -148,6 +158,7 @@ img.card-img-top {
 /* div.newsroomOrganizer, div.newsroomCategoryFeedItem  {
     background-color: #f7f7f7;
 } */
+
 /* 
 div.newsroomOrganizer.card-deck {
     flex-direction: column;
@@ -189,8 +200,8 @@ div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
 }
 
 div.card span.newsroomArticleSpecialCategory {
-    color: #aa0000; */
-}
+    color: #aa0000;
+}*/
 
 
 /*********************
