@@ -131,9 +131,7 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
-    document.write('<div class="card-subtitle mb-2 text-muted">' + degreeOne + '</div>');
-
-
+    // document.write('<div class="card-subtitle mb-2 text-muted">' + degreeOne + '</div>');
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));
     document.write('</div>'); // close card-body
     document.write('<div class="card-footer">');
