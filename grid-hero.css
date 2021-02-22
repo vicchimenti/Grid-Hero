@@ -24,31 +24,15 @@ div.heroOrganizer.card-deck {
 
 /* *****  Grid Organizer customizations  **** */
 div.gridOrganizerWrapper {
-    background-color: #f7f7f7;
-    /* background-color: #e6efff; */
+    /* background-color: #f7f7f7; */
+    background-color: #e6efff;
     /* opacity: 90%; */
-    /* If Bootstrap 5 only */
     padding-bottom: 50px;
 }
-
-/* div.gridOrganizer.standardContent {
-    display: flex;
-    flex: 1 0 calc(25% - 10px);
-    flex-flow: row wrap;
-    justify-content: center;
-} */
 
 div.gridOrganizer div.titleWrapper {
     width: 100%;
 }
-
-/* div.gridFeedItem {
-    display: flex;
-    flex: 1 0 calc(35% - 10px);
-    margin: 15px;
-    max-width: 260px;
-    padding: 0;
-} */
 
 div.card-deck div.gridFeedItem.card {
     display: flex;
@@ -58,15 +42,8 @@ div.card-deck div.gridFeedItem.card {
     padding: 0;
 }
 
-div.gridFeedItem .articleImage {
+/* div.gridFeedItem .articleImage {
     padding: 0%;
-}
-
-/* div.gridFeedItem div.newsroomArticleBlurb.container div.row {
-    margin-left: 0;
-    margin-right: 1px;
-    padding-left: 0;
-    padding-right: 0;
 } */
 
 
@@ -91,21 +68,9 @@ div.gridFeedItem .card-subtitle {
     line-height: 1.5;
 }
 
-
-/* div.gridFeedItem p {
-    font-size: 1rem;
-    font-weight: 450;
-    line-height: inherit;
-    margin-bottom: 0;
-} */
-
-/* div.gridFeedItem .newsroomArticlePublishedDate {
-    font-size: 1rem;
-    font-weight: 500;
-} */
-
 div.gridFeedItem ul li.tag {
-    font-size: inherit;
+    font-size: 1.5rem;
+    line-height: 1.5;
     list-style-type: none;
     margin: 0;
 }
@@ -116,53 +81,21 @@ p.contactInfo {
     padding: 0;
 }
 
+ul.profileTitles {
+    padding-top: 0;
+}
+
 
 /** horizontal rule between articles **/
-
 hr.articleBorderBottom {
     color: #1B1B1B;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-
-/** Overrides law style for list items **/
-
-/* div.newsroomArticle ul li.tag {
-    background: #f7f7f7;.
-    background-color: rgb(247, 247, 247);
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-radius: 15px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    display: inline-block;
-    padding: 1px 10px;
-    padding-top: 1px;
-    padding-right: 10px;
-    padding-bottom: 1px;
-    padding-left: 10px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-} */
-
-/* p.credits {
-    margin-bottom: 0.5rem;
-} */
-
 .standardContent ul li:before {
     content: none;
 }
-
-
-/** Address major feed image style **/
-
-img.articleImage {
-    min-width: -webkit-fill-available;
-    padding-top: 0;
-}
-
-/** Address grid feed image style **/
 
 img.card-img-top {
     min-width: -webkit-fill-available;
@@ -170,56 +103,6 @@ img.card-img-top {
 }
 
 
-/* *****  category feed customizations ***** */
-
-
-/* div.newsroomOrganizer, div.newsroomCategoryFeedItem  {
-    background-color: #f7f7f7;
-} */
-
-/* 
-div.newsroomOrganizer.card-deck {
-    flex-direction: column;
-}
-
-div.newsroomOrganizer.card-deck .card {
-    border: none;
-}
-
-span.newsroomImageWrapper img.articleImage {
-    padding: 0;
-}
-
-div.newsroomCategoryFeedItem div.newsroomArticleBlurb.card-body {
-    padding: 0%;
-}
-
-div.newsroomCategoryFeedItem h3 {
-    font-size: 1.75rem;
-    font-weight: 450;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-}
-
-div.newsroomCategoryFeedItem p {
-    font-size: 1.25rem;
-    font-weight: 450;
-    line-height: 1.75rem;
-}
-
-div.newsroomCategoryFeedItem ul {
-    font-size: 1.25rem;
-    font-weight: 450;
-    margin-bottom: 0;
-}
-
-div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
-    font-size: 1.25rem;
-}
-
-div.card span.newsroomArticleSpecialCategory {
-    color: #aa0000;
-}*/
 
 
 /*********************

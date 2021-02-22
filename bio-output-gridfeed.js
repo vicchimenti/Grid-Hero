@@ -129,7 +129,7 @@ try {
         contactPhone = '<span class="hidden">No Phone Provided</span>';
 
     } else {
-        contactPhone = '<p class="contactInfo">Phone: ' + phone + '</p>';
+        contactPhone = '<p class="contactInfo phone">Phone: ' + phone + '</p>';
     }
 
 
