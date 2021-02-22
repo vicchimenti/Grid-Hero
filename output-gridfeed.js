@@ -99,21 +99,6 @@ try {
     }
 
 
-    /***
-     *  Hide the anchor tag
-     * 
-     * */
-    if (frontPageImage == "") {
-        thumbNailString = '<span class="newsroomImageWrapper hidden">No Image Provided</span>';
-
-    } else {
-        thumbNailString = '<span class="newsroomImageWrapper"><img src="' + frontPageImage + '" class="articleImage card-img-top" alt="' + frontPageImageCaption + '" /></span>';
-    }
-
-
-
-
-
 
 
     /***
