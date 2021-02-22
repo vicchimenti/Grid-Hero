@@ -30,6 +30,9 @@ try {
     var profileFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Extended Biography' output='normal' display_field='value' />");
     var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />");
     var titles = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Position Title(s)' output='normal' display_field='name' />");
+    var phone = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Phone' output='normal' display_field='name' />");
+    var emailAddress = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Email Address' output='normal' display_field='name' />");
+    var roomNumber = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Building/Room Number' output='normal' display_field='name' />");
     var degrees = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Degree(s)' output='normal' display_field='name' />");
     var anchorTag = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='meta' meta='html_anchor' />");
 
@@ -53,6 +56,8 @@ try {
     var thumbNailString = "";
     var titleOne = "";
     var degreeOne = "";
+    var contactPhone = "";
+    var contactEmail = "";
     var anchorWrap = '<div class="hidden">' + anchorTag + '</div>';
     var beginningHTML = '<div class="gridFeedItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + profileTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneA" data-position-selected="ZoneA" />">';
     var endingHTML = '</div>';
@@ -122,6 +127,34 @@ try {
 
 
     /***
+     *  verify Phone
+     * 
+     * */
+    if (phone == "") {
+        contactPhone = '<span class="hidden">No Phone Provided</span>';
+
+    } else {
+        contactPhone = '<span class="phoneWrapper">Phone: ' + phone + '</span>';
+    }
+
+
+
+
+    /***
+     *  verify email
+     * 
+     * */
+    if (emailAddress == "") {
+        contactEmail = '<span class="hidden">No Phone Provided</span>';
+
+    } else {
+        contactEmail = '<span class="phoneWrapper">Phone: ' + emailAddress + '</span>';
+    }
+
+
+
+
+    /***
      *  Write the document once
      * 
      * */
@@ -131,6 +164,10 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
+    document.write(contactPhone);
+    document.write(contactEmail);
+
+
     // document.write('<div class="card-subtitle mb-2 text-muted">' + degreeOne + '</div>');
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));
     document.write('</div>'); // close card-body
