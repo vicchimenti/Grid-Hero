@@ -238,11 +238,11 @@ div.card span.newsroomArticleSpecialCategory {
         padding: 0 50px 50px 50px;
     }
 
-    .newsroomBlurb .newsroomArticleTitle a {
+    /* .newsroomBlurb .newsroomArticleTitle a {
         color: #aa0000;
         font-family: "Roboto Slab", serif;
         font-size: 2.4rem;
-    }
+    } */
 
 
 }
@@ -285,7 +285,7 @@ div.card span.newsroomArticleSpecialCategory {
         font-size: 1rem;
         font-weight: 400;
     }
-    div.newsroomCategoryFeedItem {
+    /* div.newsroomCategoryFeedItem {
         margin-left: 10px;
         margin-right: 10px;
         padding-left: 15px;
@@ -305,5 +305,5 @@ div.card span.newsroomArticleSpecialCategory {
     }
     div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
         font-size: 1rem;
-    }
+    } */
 }
