@@ -33,7 +33,7 @@ div.gridOrganizerWrapper {
 
 /* div.gridOrganizer.standardContent {
     display: flex;
-    flex: 0 0 100%;
+    flex: 1 0 calc(25% - 10px);
     flex-flow: row wrap;
     justify-content: center;
 } */
@@ -43,6 +43,8 @@ div.gridOrganizer div.titleWrapper {
 }
 
 div.gridFeedItem {
+    display: flex;
+    flex: 1 0 calc(25% - 10px);
     margin: 15px;
     max-width: 260px;
     padding: 0;
@@ -100,6 +102,10 @@ div.gridFeedItem ul li.tag {
     margin: 0;
 }
 
+p.contactInfo {
+    padding: 0;
+}
+
 
 /** horizontal rule between articles **/
 
@@ -113,7 +119,7 @@ hr.articleBorderBottom {
 /** Overrides law style for list items **/
 
 /* div.newsroomArticle ul li.tag {
-    background: #f7f7f7;
+    background: #f7f7f7;.
     background-color: rgb(247, 247, 247);
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
