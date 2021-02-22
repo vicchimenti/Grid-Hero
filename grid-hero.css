@@ -42,7 +42,15 @@ div.gridOrganizer div.titleWrapper {
     width: 100%;
 }
 
-div.gridFeedItem {
+/* div.gridFeedItem {
+    display: flex;
+    flex: 1 0 calc(35% - 10px);
+    margin: 15px;
+    max-width: 260px;
+    padding: 0;
+} */
+
+div.card-deck div.gridFeedItem.card {
     display: flex;
     flex: 1 0 calc(35% - 10px);
     margin: 15px;
