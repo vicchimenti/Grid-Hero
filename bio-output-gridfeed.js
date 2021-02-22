@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 1.5
+ *     @version 1.6
  */
 
 
@@ -80,7 +80,7 @@ try {
      * 
      * */
     if (titles != "") {
-        var arrayOfTitles = degrees.split('\n');
+        var arrayOfTitles = titles.split('\n');
         listItems = "";
         for (let i = 0; i < arrayOfTitles.length; i++) {
             listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
