@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 1.2
+ *     @version 1.3
  */
 
 
@@ -60,6 +60,7 @@ try {
     var listOfDegrees = "";
     var listOfTitles = "";
     var thumbNailString = "";
+    var anchorWrap = '<div class="hidden">' + anchorTag + '</div>';
     var beginningHTML = '<div class="gridFeedItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + profileTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneA" data-position-selected="ZoneA" />">';
     var endingHTML = '</div>';
 
@@ -130,7 +131,7 @@ try {
      * 
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorTag));
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, photoCredit));
     document.write('<div class="card-body">');
