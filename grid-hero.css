@@ -129,6 +129,11 @@ img.articleImage {
     padding-top: 0;
 }
 
+img.card-img-top {
+    min-width: -webkit-fill-available;
+    padding: 0;
+}
+
 
 /* *****  category feed customizations ***** */
 
