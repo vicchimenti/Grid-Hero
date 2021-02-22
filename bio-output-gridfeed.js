@@ -51,6 +51,7 @@ try {
     var listOfDegrees = "";
     var listOfTitles = "";
     var thumbNailString = "";
+    var titleOne = ""
     var anchorWrap = '<div class="hidden">' + anchorTag + '</div>';
     var beginningHTML = '<div class="gridFeedItem card shadow col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-4" title="' + profileTitle + '" id="id<t4 type=\'meta\' meta=\'content_id\' data-position-default="ZoneA" data-position-selected="ZoneA" />">';
     var endingHTML = '</div>';
@@ -85,6 +86,7 @@ try {
             listItems += '<li class="tag">' + arrayOfTitles[i] + '</li>';
         }
         listOfTitles = '<div class="tags"><ul class="profileTitles">' + listItems + '</ul></div>';
+        titleOne = arrayOfTitles[0];
     }
 
 
@@ -122,16 +124,19 @@ try {
      * 
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
     document.write('<div class="card-body">');
+    document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
+    document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
+
+
     // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardText));
-    document.write('</div>'); // close newsroomArticleBlurb
+    document.write('</div>'); // close card-body
     document.write('<div class="card-footer">');
-    document.write(degrees);
-    document.write(titles);
-    document.write('</div>'); // close newsroomArticleBlurb
+    document.write(listOfTitles);
+    document.write(listOfDegrees);
+    document.write('</div>'); // close card-footer
 
     // document.write('<div class="hidden"><span class="articlePinned">' + pinned + '</span><span class="catPinned">' + catPin + '</span></div>');
     document.write(endingHTML);
