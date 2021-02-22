@@ -19,7 +19,7 @@ try {
     var header, midder, footer;
 
     // declare content wrappers
-    header = '<div class="gridOrganizerWrapper contentItem" id="id' + content.getID() + '" data-position-default="ZoneA" data-position-selected="ZoneA"><div class="gridOrganizer standardContent d-flex flex-row card-deck"><div class="gridOrganizerExtra"></div>';
+    header = '<div class="gridOrganizerWrapper contentItem" id="id' + content.getID() + '" data-position-default="ZoneA" data-position-selected="ZoneA"><div class="gridOrganizer standardContent d-flex flex-row justify-content-between card-deck"><div class="gridOrganizerExtra"></div>';
     midder = '<span></span>';
     footer = '</div><div class="gridOrganizer ToggleExtra boxlinks" style="display:none">Show More</div></div>';
 
