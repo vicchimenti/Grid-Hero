@@ -82,6 +82,12 @@ div.gridFeedItem h3.card-title a {
     font-weight: 500;
 } */
 
+div.gridFeedItem ul li.tag {
+    font-size: inherit;
+    list-style-type: none;
+    margin: 0;
+}
+
 
 /** horizontal rule between articles **/
 
@@ -94,7 +100,7 @@ hr.articleBorderBottom {
 
 /** Overrides law style for list items **/
 
-div.newsroomArticle ul li.tag {
+/* div.newsroomArticle ul li.tag {
     background: #f7f7f7;
     background-color: rgb(247, 247, 247);
     border-bottom-right-radius: 15px;
@@ -109,13 +115,12 @@ div.newsroomArticle ul li.tag {
     padding-bottom: 1px;
     padding-left: 10px;
     margin-bottom: 5px;
-    ;
     margin-right: 5px;
-}
+} */
 
-p.credits {
+/* p.credits {
     margin-bottom: 0.5rem;
-}
+} */
 
 .standardContent ul li:before {
     content: none;
@@ -129,6 +134,8 @@ img.articleImage {
     padding-top: 0;
 }
 
+/** Address grid feed image style **/
+
 img.card-img-top {
     min-width: -webkit-fill-available;
     padding: 0;
@@ -141,7 +148,7 @@ img.card-img-top {
 /* div.newsroomOrganizer, div.newsroomCategoryFeedItem  {
     background-color: #f7f7f7;
 } */
-
+/* 
 div.newsroomOrganizer.card-deck {
     flex-direction: column;
 }
@@ -182,7 +189,7 @@ div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
 }
 
 div.card span.newsroomArticleSpecialCategory {
-    color: #aa0000;
+    color: #aa0000; */
 }
 
 
