@@ -134,7 +134,7 @@ try {
         contactPhone = '<span class="hidden">No Phone Provided</span>';
 
     } else {
-        contactPhone = '<span class="phoneWrapper">Phone: ' + phone + '</span><br />';
+        contactPhone = '<p class="phoneWrapper">Phone: ' + phone + '</p>';
     }
 
 
@@ -148,7 +148,7 @@ try {
         contactEmail = '<span class="hidden">No Phone Provided</span>';
 
     } else {
-        contactEmail = '<span class="phoneWrapper">Email: ' + emailAddress + '</span><br />';
+        contactEmail = '<p class="phoneWrapper">Email: ' + emailAddress + '</p>';
     }
 
 
