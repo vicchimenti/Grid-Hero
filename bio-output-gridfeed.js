@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 1.8
+ *     @version 1.9
  */
 
 
@@ -134,7 +134,7 @@ try {
         contactPhone = '<span class="hidden">No Phone Provided</span>';
 
     } else {
-        contactPhone = '<p class="phoneWrapper">Phone: ' + phone + '</p>';
+        contactPhone = '<p class="contactInfo">Phone: ' + phone + '</p>';
     }
 
 
@@ -148,7 +148,7 @@ try {
         contactEmail = '<span class="hidden">No Phone Provided</span>';
 
     } else {
-        contactEmail = '<p class="phoneWrapper">Email: ' + emailAddress + '</p>';
+        contactEmail = '<p class="contactInfo">Email: ' + emailAddress + '</p>';
     }
 
 
