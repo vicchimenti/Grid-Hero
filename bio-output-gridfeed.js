@@ -159,12 +159,13 @@ try {
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
     document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
-    document.write(contactPhone);
-    document.write(contactEmail);
     document.write('</div>'); // close card-body
     document.write('<div class="card-footer">');
-    document.write(listOfTitles);
-    document.write(listOfDegrees);
+    document.write(contactPhone);
+    document.write(contactEmail);
+
+    // document.write(listOfTitles);
+    // document.write(listOfDegrees);
     document.write('</div>'); // close card-footer
     document.write(endingHTML);
 
