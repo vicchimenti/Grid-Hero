@@ -147,6 +147,15 @@ img.card-img-top {
 
 @media screen and (max-width: 1200px) {}
 
+@media only screen and (max-width: 992px) {
+    div.card-deck div.gridFeedItem.card {
+        display: flex;
+        flex: 1 0 calc(35% - 10px);
+        margin: 15px;
+        padding: 0;
+    }
+}
+
 @media screen and (max-width: 767.999px) {
     h2.organizerTitle {
         font-size: 2rem;
@@ -165,15 +174,13 @@ img.card-img-top {
     div.gridOrganizerWrapper h2.organizerTitle {
         padding-left: 5px;
     }
-    div.card-deck div.gridFeedItem.card {
-        display: flex;
-        flex: 1 0 calc(35% - 10px);
-        margin: 15px;
-        padding: 0;
-    }
     div.gridFeedItem {
         font-size: 1rem;
         font-weight: 400;
+        max-width: 100%;
+    }
+    div.card-deck div.gridFeedItem.card {
+        flex: auto;
         max-width: 100%;
     }
     div.gridFeedItem h3 {
