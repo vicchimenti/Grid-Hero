@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.3
+ *     @version 2.4
  */
 
 
@@ -99,9 +99,9 @@ try {
      * 
      * */
     if (profileFullBody == "") {
-        titleLink = '<h3 class="card-title">' + profileTitle + '</h3>';
+        titleLink = '<h3 class="card-header">' + profileTitle + '</h3>';
     } else {
-        titleLink = '<h3 class="card-title"><a href="' + fullTextLink + '">' + profileTitle + '</a></h3>';
+        titleLink = '<h3 class="card-header"><a href="' + fullTextLink + '">' + profileTitle + '</a></h3>';
     }
 
 
@@ -155,10 +155,11 @@ try {
      * */
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, thumbNailString));
-    document.write('<div class="card-body">');
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, anchorWrap));
     document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-    document.write('<div class="card-subtitle mb-2 text-muted">' + titleOne + '</div>');
+    document.write('<div class="card-body">');
+    document.write('<div class="card-title">' + titleOne + '</div>');
+    document.write('<div class="card-subtitle mb-2 text-muted">' + degreeOne + '</div>');
     document.write('</div>'); // close card-body
     document.write('<div class="card-footer">');
     document.write(contactPhone);
