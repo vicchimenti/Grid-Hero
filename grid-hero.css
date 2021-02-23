@@ -4,22 +4,16 @@
 }
 
 
-
-
 /* ****** Wraps Overflow within container ****** */
 div#MainZone div.container {
     display: contents;
 }
 
 
-
-
 /* *****  Hero Organizer customizations  **** */
 div.heroOrganizer.card-deck {
     flex-flow: column;
 }
-
-
 
 
 /* *****  Grid Organizer customizations  **** */
@@ -38,15 +32,8 @@ div.card-deck div.gridFeedItem.card {
     display: flex;
     flex: 1 0 calc(35% - 10px);
     margin: 15px;
-    /* max-width: 260px; */
     padding: 0;
 }
-
-/* div.gridFeedItem .articleImage {
-    padding: 0%;
-} */
-
-
 
 div.gridFeedItem h3.card-title {
     font-family: Montserrat,sans-serif;
@@ -114,16 +101,7 @@ img.card-img-top {
 
 /* ***** Mobile Up ***** */
 
-@media screen and (min-width: 576px) {
-    /* If Bootstrap 4 only */
-    /* div.gridFeedItem {
-        flex: auto;
-    } */
-}
-
-
-
-
+@media screen and (min-width: 576px) {}
 
 @media screen and (min-width: 767.999px) {
     /* If Bootstrap 4 only */
@@ -131,24 +109,19 @@ img.card-img-top {
         padding: 0 50px 50px 50px;
     }
 
-    /* .newsroomBlurb .newsroomArticleTitle a {
-        color: #aa0000;
-        font-family: "Roboto Slab", serif;
-        font-size: 2.4rem;
-    } */
-
-
+    div.card-deck div.gridFeedItem.card {
+        display: flex;
+        flex: 1 0 calc(35% - 10px);
+        margin: 15px;
+        max-width: 260px;
+        padding: 0;
+    }
 }
 
 
 /* ***** Desktop down ***** */
 
-@media screen and (max-width: 1200px) {
-    /* If Bootstrap 4 only */
-    /* .card-deck div.gridFeedItem.card {
-        flex: auto;
-    } */
-}
+@media screen and (max-width: 1200px) {}
 
 @media screen and (max-width: 767.999px) {
     h2.organizerTitle {
@@ -159,8 +132,11 @@ img.card-img-top {
         padding-right: 10px;
     }
     div.gridOrganizerWrapper {
-        padding-bottom: 15px;
-        padding-left: 15px;
+        padding: 0 15px 15px 15px;
+    }
+    div.gridOrganizer.card-deck {
+        margin-left: 0;
+        margin-right: 30px;
     }
     div.gridOrganizerWrapper h2.organizerTitle {
         padding-left: 5px;
@@ -178,25 +154,4 @@ img.card-img-top {
         font-size: 1rem;
         font-weight: 400;
     }
-    /* div.newsroomCategoryFeedItem {
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    div.newsroomCategoryFeedItem h3 {
-        font-size: 1rem;
-        font-weight: 400;
-    }
-    div.newsroomCategoryFeedItem p {
-        font-size: 1rem;
-        font-weight: 400;
-    }
-    div.newsroomCategoryFeedItem ul {
-        font-size: 1rem;
-        font-weight: 400;
-    }
-    div.newsroomOrganizerWrapper p.newsroomArticlePublishedDate {
-        font-size: 1rem;
-    } */
 }
