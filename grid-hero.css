@@ -3,11 +3,15 @@
     display: none;
 }
 
+#header-2 {
+    padding-bottom: 50px;
+}
+
 
 /* ****** Wraps Overflow within container ****** */
-div#MainZone div.container {
+/* div#MainZone div.container {
     display: contents;
-}
+} */
 
 
 /* *****  Hero Organizer customizations  **** */
@@ -42,6 +46,7 @@ div.gridOrganizerWrapper {
     background-color: #e6efff;
     /* opacity: 90%; */
     padding-bottom: 50px;
+    padding-top: 50px;
 }
 
 div.gridOrganizer div.titleWrapper {
@@ -73,6 +78,10 @@ div.gridFeedItem h3.card-title a {
 div.gridFeedItem .card-subtitle {
     font-size: 1.5rem;
     line-height: 1.5;
+}
+
+div.gridFeedItem .card-text {
+    font-weight: 500;
 }
 
 div.gridFeedItem ul li.tag {
@@ -128,10 +137,10 @@ img.card-img-top {
     div.gridOrganizerWrapper {
         padding: 0 50px 50px 50px;
     }
-
+    
     div.card-deck div.gridFeedItem.card {
         display: flex;
-        flex: 1 0 calc(35% - 10px);
+        flex: 1 0 calc(20% - 10px);
         margin: 15px;
         max-width: 260px;
         padding: 0;
