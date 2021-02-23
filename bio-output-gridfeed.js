@@ -12,7 +12,7 @@
  *
  *     Document will write once when the page loads
  *
- *     @version 2.1
+ *     @version 2.3
  */
 
 
@@ -163,9 +163,6 @@ try {
     document.write('<div class="card-footer">');
     document.write(contactPhone);
     document.write(contactEmail);
-
-    // document.write(listOfTitles);
-    // document.write(listOfDegrees);
     document.write('</div>'); // close card-footer
     document.write(endingHTML);
 
