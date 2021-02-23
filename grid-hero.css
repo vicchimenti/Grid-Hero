@@ -144,7 +144,7 @@ img.card-img-top {
 
 @media screen and (max-width: 767.999px) {
     h2.organizerTitle {
-        font-size: 1.75rem;
+        font-size: 2rem;
         margin-left: 10px;
         margin-right: 10px;
         padding-left: 15px;
@@ -169,8 +169,10 @@ img.card-img-top {
         font-size: 1rem;
         font-weight: 400;
     }
-    /* div.gridFeedItem p {
-        font-size: 1rem;
-        font-weight: 400;
-    } */
+    div.heroOrganizer h3.card-title {
+        font-size: 2rem;
+    }
+    div.heroOrganizer h3.card-title a {
+        font-size: 2rem;
+    }
 }
